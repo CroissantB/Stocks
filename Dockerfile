@@ -18,7 +18,8 @@ COPY . .
 RUN npm run build
 
 # Expose the port the app runs on
+ENV PORT=8080
 EXPOSE 8080
 
 # Start the application
-CMD ["npm", "start"]
+CMD ["node", "dist/server.mjs"]
